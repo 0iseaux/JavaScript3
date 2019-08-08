@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+  background-color: rgb(255, 123, 0);
+  color: rgb(5, 5, 100);
+}
+
+a {
+  color: rgb(5, 5, 100);
+}
+
+h1 {
+  text-align: center;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+#fork {
+  float: right;
+  font-family: monospace;
+}
+
+h2 {
+  text-align: center;
+  font-family: cursive;
+}
+
+#wks {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: space-evenly;
+}
+
+.wk {
+  min-width: 28%;
+  max-width: 85%;
+  background-color: white;
+  border-radius: 20%;
+  padding: 20px;
+  margin: 10px;
+}
