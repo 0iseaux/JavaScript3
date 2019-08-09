@@ -52,7 +52,7 @@ function main(url) {
       })
 
       .then(data => {
-        // console.log(data)
+        // git console.log(data)
 
         //SORT repo names in alphabetical order (case-insensitive) & generate obj with REDUCE
         let sorted = Object.keys(data)
