@@ -52,7 +52,7 @@ function main(url) {
       })
 
       .then(data => {
-        console.log(data);
+        // console.log(data);
 
         //SORT repo names in alphabetical order (case-insensitive) & generate obj with REDUCE
         let sorted = Object.keys(data)
@@ -66,13 +66,13 @@ function main(url) {
             acc[i] = data[curr];
             return acc;
           }, {});
-        console.log(sorted);
+        // console.log(sorted);
 
         // generate ARRAY of repo names
         for (const repo in sorted) {
           repoNamesArr.push(sorted[repo].name);
         }
-        console.log(repoNamesArr);
+        // console.log(repoNamesArr);
 
         // create list of repo names from Arr to select from
         repoNamesArr.forEach(repoName => {
