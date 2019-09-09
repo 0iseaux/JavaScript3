@@ -3,6 +3,15 @@
     background-color: pink;
 }
 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    width: 100px;
+    border-radius: 50%;
+}
+
 body {
     font-family: monospace;
     background-color: rgb(151, 252, 218);
@@ -66,132 +75,109 @@ img {
 }
 
 /* DEFAULT DESIGN #### Desktops #### */
-@media screen and (min-device-width: 1025px) {
 
+@media screen and (min-device-width: 1025px) {
     #root {
         grid-template: 50px 30px 1fr / 1fr 1fr;
         gap: 10px 10px;
     }
-
     h1 {
         line-height: 20px;
     }
-
     #repoList {
         padding-left: 10px;
     }
-
     select {
         font-size: 12px;
         max-width: 90%;
     }
-
     #selected {
         font-size: 16px;
         text-align: justify;
         margin: 10px;
     }
-
     .selected {
         padding: 10px;
     }
-
     #contributors {
         font-size: 14px;
         margin: 10px;
     }
-
     .contributors {
         padding: 3px;
     }
-
     img {
         max-width: 20%;
     }
-
 }
 
 /* #### Tablets Portrait or Landscape #### */
+
 @media screen and (min-device-width: 768px) {
     #root {
         grid-template: 50px 30px 1fr / 1fr 1fr;
         gap: 8px 8px;
     }
-
     h1 {
         line-height: 15px;
     }
-
     #repoList {
         padding-left: 5px;
     }
-
     select {
         font-size: 11px;
     }
-
     #selected {
         font-size: 14px;
         text-align: justify;
         margin: 5px;
     }
-
     .selected {
         padding: 5px;
     }
-
     #contributors {
         font-size: 12px;
         margin: 5px;
     }
-
     .contributors {
         padding: 2px;
     }
-
     img {
         max-width: 15%;
     }
 }
 
 /* #### Mobile Phones Portrait or Landscape #### */
+
 @media screen and (max-device-width: 640px) {
     #root {
         grid-template: 30px 20px 1fr / 1fr 1fr;
         gap: 3px 3px;
     }
-
     h1 {
         font-size: 15px;
     }
-
     #repoList {
         padding-left: 3px;
     }
-
     select {
         font-size: 10px;
     }
-
     #selected {
         font-size: 11px;
         text-align: justify;
         margin: 3px;
     }
-
     .selected {
         padding: 3px;
     }
-
     #contributors {
         font-size: 10px;
         margin: 3px;
     }
-
     .contributors {
         padding: 1px;
     }
-
     img {
         max-width: 20%;
     }
