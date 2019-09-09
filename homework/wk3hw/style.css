@@ -28,7 +28,6 @@ body {
 h1 {
     grid-area: header;
     text-align: center;
-    line-height: 20px;
 }
 
 #repoList {
@@ -43,6 +42,7 @@ select {
     font-family: monospace;
     font-size: 12px;
     max-width: 90%;
+    margin-top: 30px;
     background-color: white;
 }
 
@@ -82,7 +82,7 @@ img {
         gap: 10px 10px;
     }
     h1 {
-        line-height: 20px;
+        line-height: 30px;
     }
     #repoList {
         padding-left: 10px;
@@ -90,6 +90,7 @@ img {
     select {
         font-size: 12px;
         max-width: 90%;
+        margin-top: 30px;
     }
     #selected {
         font-size: 16px;
@@ -119,13 +120,14 @@ img {
         gap: 8px 8px;
     }
     h1 {
-        line-height: 15px;
+        line-height: 30px;
     }
     #repoList {
         padding-left: 5px;
     }
     select {
         font-size: 11px;
+        margin-top: 30px;
     }
     #selected {
         font-size: 14px;
@@ -154,14 +156,12 @@ img {
         grid-template: 30px 20px 1fr / 1fr 1fr;
         gap: 3px 3px;
     }
-    h1 {
-        font-size: 15px;
-    }
     #repoList {
         padding-left: 3px;
     }
     select {
         font-size: 10px;
+        margin-top: 30px;
     }
     #selected {
         font-size: 11px;
