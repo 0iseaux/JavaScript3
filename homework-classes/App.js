@@ -13,17 +13,43 @@ class App {
    * @param {string} url The GitHub URL for obtaining the organization's repositories.
    */
   async initialize(url) {
-    // Add code here to initialize your app
     // 1. Create the fixed HTML elements of your page
-    // 2. Make an initial XMLHttpRequest using Util.fetchJSON() to populate your <select> element
-
     const root = document.getElementById('root');
-    const header = Util.createAndAppend('header', root, { class: 'header' });
-    this.mainContainer = Util.createAndAppend('div', root, { id: 'container' });
+    Util.createAndAppend('img', root, {
+      class: 'header',
+      src: './hyf.png'
+    });
+    Util.createAndAppend('header', root, {
+      class: 'header',
+      text: 'Hack Your Future Repositories'
+    });
+    this.mainContainer = Util.createAndAppend('div', root, {
+      id: 'mainContainer'
+    });
+    const repoList = Util.createAndAppend('div', this.mainContainer, {
+      id: 'repoList',
+    });
+    const select = Util.createAndAppend('select', this.mainContainer, {
+      id: 'repoList',
+    });
+    const option = Util.createAndAppend('option', select, {
+      id: 'repoList',
+      value: '',
+      text: '<--Choose a Repository-->'
+    });
+    const selected = Util.createAndAppend('div', this.mainContainer, {
+      id: 'selected',
+    });
+    const contributors = Util.createAndAppend('div', this.mainContainer, {
+      id: 'contributors',
+    });
 
+
+    // 2. Make an initial XMLHttpRequest using Util.fetchJSON() to populate your <select> element
     try {
       const repos = await Util.fetchJSON(url);
       this.repos = repos.map(repo => new Repository(repo));
+
       // TODO: add your own code here
     } catch (error) {
       this.renderError(error);
