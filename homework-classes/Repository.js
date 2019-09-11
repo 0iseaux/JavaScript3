@@ -17,12 +17,12 @@ class Repository {
     const selected = document.getElementById('selected');
 
     Util.createAndAppend('div', selected, {
-      text: `<b>Name of Repository:</b><br>${this.repository.description})<br><br>`,
+      text: `<b>Name of Repository:</b><br>${this.repository.name})<br><br>`,
       class: 'selected',
     });
 
     Util.createAndAppend('div', selected, {
-      text: `<b>Description:</b><br>${this.name}<br><br>`,
+      text: `<b>Description:</b><br>${this.repository.description}<br><br>`,
       class: 'selected',
     });
     Util.createAndAppend('div', selected, {
@@ -49,7 +49,7 @@ class Repository {
   /**
    * Returns the name of the repository
    */
-  name() {
+  name() { // ???
     return this.repository.name;
   }
 }
