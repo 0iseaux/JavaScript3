@@ -44,9 +44,10 @@ class App {
     const selected = Util.createAndAppend('div', this.mainContainer, {
       id: 'selected',
     });
-    const contributorsDiv = Util.createAndAppend('div', this.mainContainer, {
-      id: 'contributors',
+    this.contributorsDiv = Util.createAndAppend('div', this.mainContainer, {
+      id: 'contributorsDiv',
     });
+    this.contributorList = Util.createAndAppend('ul', this.contributorsDiv);
 
     // 2. Make an initial XMLHttpRequest using Util.fetchJSON() to populate your <select> element
     try {
@@ -68,11 +69,18 @@ class App {
           return acc;
         }, {});
 
+      /*
+      console.log(sorted)
+      console.log(sorted[0])
+      console.log(sorted[0].name)
+      console.log(sorted[0].name())
+      */
+
 
       // generate ARRAY of repo names
       let repoNamesArr = [];
       for (const i in sorted) {
-        repoNamesArr.push(sorted[i].name());
+        repoNamesArr.push(sorted[i].name()); // name() instead of name
       }
 
 
@@ -106,7 +114,7 @@ class App {
    */
   clearContainer() {
     document.getElementById('selected').innerHTML = '';
-    document.getElementById('contributors').innerHTML = '';
+    this.contributorList.innerHTML = '';
   }
 
   /**
@@ -117,19 +125,18 @@ class App {
 
   async selectRepository(repo) {
     try {
-      this.clearContainer();
+
       const contributors = await repo.fetchContributors();
 
-      const repoContainer = Util.createAndAppend('div', this.mainContainer);
-      const contributorContainer = Util.createAndAppend('div', this.mainContainer);
+      const repoContainer = document.getElementById('selected')
 
-      const contributorList = Util.createAndAppend('ul', contributorContainer);
+      this.clearContainer();
 
       repo.render(repoContainer);
 
       contributors
         .map(contributor => new Contributor(contributor))
-        .forEach(contributor => contributor.render(contributorList, contributorContainer));
+        .forEach(contributor => contributor.render(this.contributorList));
     } catch (error) {
       this.renderError(error);
     }

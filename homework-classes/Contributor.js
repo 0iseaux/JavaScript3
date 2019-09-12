@@ -12,23 +12,20 @@ class Contributor {
    * Render the contributor info to the DOM.
    * @param {HTMLElement} container The container element in which to render the contributor.
    */
-  render(list, container) {
+  render(container) {
     // TODO: replace the next line with your code.
 
-    container.appendChild(list)
-
-    Util.createAndAppend('li', list, {
+    Util.createAndAppend('li', container, {
       text: `<img src="${this.contributor.avatar_url}">`,
       class: 'contributors',
     });
 
-    Util.createAndAppend('li', list, {
+    Util.createAndAppend('li', container, {
       text: `<b>Name of Contributor:</b><a href="${this.contributor.html_url}" target="_blank">${this.contributor.login}</a>`,
       class: 'contributors',
-
     });
 
-    Util.createAndAppend('li', list, {
+    Util.createAndAppend('li', container, {
       text: `<b>Contributions:</b>${this.contributor.contributions}</a>`,
       class: 'contributors',
     });
