@@ -15,22 +15,23 @@ class Contributor {
   render(list, container) {
     // TODO: replace the next line with your code.
 
+    container.appendChild(list)
+
     Util.createAndAppend('li', list, {
-      text: `<b>Contributor:</b><br>${this.contributor.description})<br><br>`,
-      class: 'selected',
+      text: `<img src="${this.contributor.avatar_url}">`,
+      class: 'contributors',
     });
 
-    Util.createAndAppend('div', container, {
-      text: `<b>Name of Repository:</b><br>${this.contributor.description})<br><br>`,
-      class: 'selected',
+    Util.createAndAppend('li', list, {
+      text: `<b>Name of Contributor:</b><a href="${this.contributor.html_url}" target="_blank">${this.contributor.login}</a>`,
+      class: 'contributors',
+
     });
 
-    Util.createAndAppend('div', container, {
-      text: `<b>Name of Repository:</b><br>${this.contributor.description})<br><br>`,
-      class: 'selected',
+    Util.createAndAppend('li', list, {
+      text: `<b>Contributions:</b>${this.contributor.contributions}</a>`,
+      class: 'contributors',
     });
-
-
 
   }
 }

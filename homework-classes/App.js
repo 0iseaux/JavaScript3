@@ -92,7 +92,6 @@ class App {
       // WHEN SELECTING A REPO ...
       select.addEventListener('change', repoSelected => {
 
-        this.clearContainer();
         this.selectRepository(sorted[repoSelected.target.value]);
         // this.selectRepository(sorted[repoSelected.target.value]);
       });
@@ -107,8 +106,8 @@ class App {
    */
   clearContainer() {
     document.getElementById('selected').innerHTML = '';
+    document.getElementById('contributors').innerHTML = '';
   }
-
 
   /**
    * Fetch contributor information for the selected repository and render the
@@ -130,7 +129,7 @@ class App {
 
       contributors
         .map(contributor => new Contributor(contributor))
-        .forEach(contributor => contributor.render(contributorContainer));
+        .forEach(contributor => contributor.render(contributorList, contributorContainer));
     } catch (error) {
       this.renderError(error);
     }
