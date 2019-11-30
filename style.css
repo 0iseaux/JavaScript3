@@ -1,40 +1,94 @@
+.alert-error {
+  color: rgb(117, 0, 0);
+  background-color: pink;
+}
+
 body {
-  font-family: sans-serif;
-  background-color: rgb(255, 123, 0);
-  color: rgb(5, 5, 100);
-}
-
-a {
-  color: rgb(5, 5, 100);
-}
-
-h1 {
-  text-align: center;
-  font-family: cursive;
-  font-weight: bold;
-}
-
-#fork {
-  float: right;
   font-family: monospace;
+  background-color: rgb(151, 252, 218);
+  color: rgb(109, 1, 109);
 }
 
-h2 {
+#root {
+  display: grid;
+  grid-template: 2fr 2fr 6fr;
+  grid-template-areas: 'header' 'select' 'mainContainer';
+  gap: 5px 5px;
+  height: 100%;
+}
+
+img {
+  width: 200px;
+  margin: 5px;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 15%;
+  border-radius: 50%;
+}
+
+#repoListDiv {
+  grid-area: select;
+  display: block;
+  padding-left: 10px;
+  margin: 20px;
   text-align: center;
-  font-family: cursive;
 }
 
-#wks {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: space-evenly;
+#repoSelect {
+  text-align: center;
 }
 
-.wk {
-  min-width: 28%;
-  max-width: 85%;
+#mainContainer {
+  grid-area: mainContainer;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'selected contributors';
+  gap: 3px 3px;
+  width: 100%;
+  height: 100%;
+}
+
+.select {
+  align-self: center;
+  font-family: monospace;
+  font-size: 12px;
+  max-width: 90%;
+  margin-top: 30px;
   background-color: white;
-  border-radius: 20%;
-  padding: 20px;
-  margin: 10px;
+}
+
+#selected {
+  grid-area: selected;
+  font-size: 16px;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.selected {
+  background-color: rgb(255, 226, 253);
+  padding: 10px;
+}
+
+#contributorsDiv {
+  grid-area: contributors;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contributorsList {
+  display: block;
+}
+
+.contributors {
+  font-size: 14px;
+  padding: 2px;
 }

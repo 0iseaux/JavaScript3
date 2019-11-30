@@ -1,99 +1,35 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="apple-touch-icon" href="./hyf.png" id="logo" />
+    <link rel="shortcut icon" type="image/png" href="./hyf.png" />
+    <title>HYF-GITHUB</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<html>
-
-<head>
-    <title>JS3 Homework</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-    <h1>JS3 Homework</h1>
-    <a id="fork" href="https://github.com/0iseaux/JavaScript3">forked Repo-Javascript 3</a> <br />
-    <hr />
-    <div id="wks">
-        <div class="wk" id="w1">
-            <h2>Week 1</h2>
-            <ul>
-                <li>Objective: Create a basic application using callbacks to handle network requests (XMLHttpRequests)
-                    to
-                    display
-                    information about <a href="https://github.com/hackyourfuture" target="_blank">HYF GitHub
-                        repositories</a>:
-                <li>Functional Requirements:
-                    <ol>
-                        <li>The list of repositories in the select element should be sorted (case-insensitive) on
-                            repository name.
-                        </li>
-                        <li><u>At start-up your application should display information about the first repository as
-                                displayed in
-                                the
-                                select
-                                element. (Currently not met using 'Choose a Repository' on start-up with a listener for
-                                'change'
-                                event)</u></li>
-                        <li>When the user changes the selection, the information in the web page should be refreshed for
-                            the newly
-                            selected repository.</li>
-                        <li>User should be able to click on the repository name of the selected repository to open a new
-                            browser tab
-                            with
-                            the GitHub page for that repository.</li>
-                        <li>User should be able to click on a contributor to open a new browser tab with the GitHub page
-                            for that
-                            contributor.</li>
-                        <li>Render network errors to the DOM. Use the predefined alert-error class from style.css to
-                            style
-                            any error.</li>
-                        <li>The UI should be responsive.</li>
-                    </ol>
-                </li>
-                </li>
-            </ul>
-            <a href="https://github.com/HackYourFuture/JavaScript3/blob/master/Week1/MAKEME.md">(Detailed
-                instructions)</a>
-            <br /><br />
-            Outcome: <br />
-            <a href="https://0iseaux.github.io/JavaScript3/homework/wk1hw/index.html">Simple Application
-                (XMLHttpRequest)</a> (rendered html)<br />
-            <br /><br /><br />
+  <body>
+    <div id="root"></div>
+<!--
+        <div id="repoList">
         </div>
-
-        <div class="wk" id="w2">
-            <h2>Week 2</h2>
-            <ul>
-                <li>
-                    Objective: Refine the basic application using Promises, and .then() and .catch() methods.
-                </li>
-                <li><u>Outstanding issue: error(s) not displayed properly</u></li>
-            </ul>
-            <a href="https://github.com/HackYourFuture/JavaScript3/blob/master/Week2/MAKEME.md">Instructions</a>
-            <br />
-            <br />
-            Outcome: <br /><a href="https://0iseaux.github.io/JavaScript3/homework/wk2hw/index.html">Basic Application
-                (Promise, fetch(), .then(), .catch())</a></li>
-            </ul><br><br>
-        </div>
-        <div class="wk" id="w3">
-            <h2>Week 3</h2>
-            <ul>
-                <li>
-                    Objective: Refine the basic application using async / await and try...catch, as well as classes.
-                </li>
-            </ul>
-            <a href="https://github.com/foocoding/JavaScript2/blob/master/Week3/MAKEME.md">Instructions</a>
-            <br />
-            <br />
-            Outcome: <br />
-            <ul>
-                <li>
-                    <a href="https://0iseaux.github.io/JavaScript3/homework/wk3hw/index.html">Basic application
-                        refined</a>
-                </li>
-            </ul>
-
-        </div>
+        <div id="selected"></div>
+        <div id="contributors"></div>
     </div>
-</body>
+--> 
 
+    <script src="./Util.js"></script>
+    <script src="./Repository.js"></script>
+    <script src="./Contributor.js"></script>
+    <script src="./App.js"></script>
+  </body>
 </html>
