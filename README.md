@@ -1,5 +1,5 @@
-using the [GitHub API](https://developer.github.com/v3/guides/getting-started/)
+-   An SPA to check out info on HYF's GitHub APIs
 
-using async/await, try...catch
+JS class, `async` / `await`, CSS grids, etc were used.
 
-https://github.com/HackYourFuture/JavaScript3/blob/master/Week3/MAKEME.md
+N.B. Part of the code was prewritten as this was part of the homework.
